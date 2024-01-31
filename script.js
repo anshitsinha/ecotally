@@ -37,6 +37,133 @@ function calculator(){
     let target2=document.getElementsByClassName("opBox1")[1];
     target1.innerHTML="Your approximate Carbon Footprint";
     target2.innerHTML=+totalEmi+" tonnes";
+
+    
+
+const electdt = electIP*0.00071*1000;
+var fueldt = (lpgIP*0.00207)+ (caolIP*0.0025);
+const airdt = airIP*33;
+var raildt = railIP*0.0078;
+var metrodt =metroIP*0.0139;
+var busdt =busIP*0.054;
+var cardt =carIP*0.1431;
+var petroldt = petrolIP*2.34;
+var cngdt = cngIP*2.07;
+var dieseldt =dieselIP*2.71;
+
+
+
+
+
+// Data for labels and items
+let labels = ['elect','fuel','air','rail','metro','bus','car','petrol'];
+let itemdata = [98, fueldt, airdt, raildt, metrodt, busdt, cardt, petroldt]; // Convert data to numbers
+
+// Chart data configuration
+const data = {
+    labels: labels,
+    datasets: [{
+        label: 'Items Data',
+        data: itemdata,
+        backgroundColor: 'rgb(191, 45, 45)',
+    }]
+};
+
+// Chart configuration
+const config = {
+    type: 'line',
+    data: data,
+};
+
+// Create a new chart instance
+const chart = new Chart(
+    document.getElementById('myChart1'),
+    config
+);
+
+
+
+
+
+
+
+
+
+
+
+
+// Data for labels and items
+let labels2 = ['elect','fuel','air','rail','metro','bus','car','petrol'];
+let itemdata2 = [98, fueldt, airdt, raildt, metrodt, busdt, cardt, petroldt]; // Convert data to numbers
+
+// Chart data configuration
+const data2 = {
+    labels: labels2,
+    datasets: [{
+        label: 'Items Data',
+        data: itemdata2,
+        backgroundColor: 'rgb(191, 45, 45)',
+    }]
+};
+
+// Chart configuration
+const config2 = {
+    type: 'pie',
+    data: data2,
+};
+
+// Create a new chart instance
+const chart2 = new Chart(
+    document.getElementById('myChart2'),
+    config2
+);
+
+
+
+
+
+
+
+
+
+
+
+// Data for labels and items
+let labels1 = ['yours', 'national average', 'taylor swifts'];
+let itemdata1 = [4, 2, 13]; // Convert data to numbers
+
+// Chart data configuration
+const data1 = {
+    labels: labels1,
+    datasets: [{
+        label: 'Items Data',
+        data: itemdata1,
+        backgroundColor: 'rgb(191, 45, 45)',
+    }]
+};
+
+// Chart configuration
+const config1 = {
+    type: 'bar',
+    data: data1,
+    options: {
+        indexAxis: 'y',
+        // Elements options apply to all of the options unless overridden in a dataset
+        // In this case, we are setting the border of each horizontal bar to be 2px wide
+        elements: {
+          bar: {
+            borderWidth: 0,
+          }
+        },
+        responsive: true,
+    }
+};
+
+// Create a new chart instance
+const chart1 = new Chart(
+    document.getElementById('myChart3'),
+    config1
+);
 }
 
 let n0=document.querySelector(".n0");
@@ -118,138 +245,6 @@ p5.addEventListener('click', function(event) {
 
 
 
-electIP=document.getElementById("elect").value;
-console.log(electIP);
-lpgIP=document.getElementById("lpg").value;
-caolIP=document.getElementById("coal").value;
-airIP=document.getElementById("air").value;
-railIP=document.getElementById("rail").value;
-metroIP=document.getElementById("metro").value;
-busIP=document.getElementById("bus").value;
-carIP=document.getElementById("car").value;
-petrolIP=document.getElementById("petrol").value;
-dieselIP=document.getElementById("diesel").value;
-cngIP=document.getElementById("cng").value;
-mealIP=document.querySelector('input[name="food"]:checked');
-console.log("Selected Food:", mealIP.value);
 
 
 
-
-
-var electdt = electIP*0.00071;
-var fueldt = (lpgIP*0.00207)+ (caolIP*0.0025);
-var traveldt = (airIP*0.000121)+(railIP*0.0078/1000)+(metroIP*0.0139/1000)+(busIP*0.054/1000)+(carIP*0.1431/1000)+(2.019)+(petrolIP*2.34/1000)+(dieselIP*2.71/1000)+(cngIP*2.07/1000);
-var foodt = 2;
-
-
-
-// Data for labels and items
-let labels = ['big mac', 'jj', 'kl'];
-let itemdata = [electdt, fueldt, traveldt]; // Convert data to numbers
-
-// Chart data configuration
-const data = {
-    labels: labels,
-    datasets: [{
-        label: 'Items Data',
-        data: itemdata,
-        backgroundColor: 'rgb(191, 45, 45)',
-    }]
-};
-
-// Chart configuration
-const config = {
-    type: 'line',
-    data: data,
-};
-
-// Create a new chart instance
-const chart = new Chart(
-    document.getElementById('myChart1'),
-    config
-);
-
-
-
-
-
-
-
-
-
-
-
-
-// Data for labels and items
-let labels2 = ['big mac', 'jj', 'kl'];
-let itemdata2 = [22, 33, 999]; // Convert data to numbers
-
-// Chart data configuration
-const data2 = {
-    labels: labels2,
-    datasets: [{
-        label: 'Items Data',
-        data: itemdata2,
-        backgroundColor: 'rgb(191, 45, 45)',
-    }]
-};
-
-// Chart configuration
-const config2 = {
-    type: 'pie',
-    data: data,
-};
-
-// Create a new chart instance
-const chart2 = new Chart(
-    document.getElementById('myChart2'),
-    config2
-);
-
-
-
-
-
-
-
-
-
-
-
-// Data for labels and items
-let labels1 = ['big mac', 'jj', 'kl'];
-let itemdata1 = [2200, 33000, 2000]; // Convert data to numbers
-
-// Chart data configuration
-const data1 = {
-    labels: labels1,
-    datasets: [{
-        label: 'Items Data',
-        data: itemdata1,
-        backgroundColor: 'rgb(191, 45, 45)',
-    }]
-};
-
-// Chart configuration
-const config1 = {
-    type: 'bar',
-    data: data,
-    options: {
-        indexAxis: 'y',
-        // Elements options apply to all of the options unless overridden in a dataset
-        // In this case, we are setting the border of each horizontal bar to be 2px wide
-        elements: {
-          bar: {
-            borderWidth: 0,
-          }
-        },
-        responsive: true,
-    }
-};
-
-// Create a new chart instance
-const chart1 = new Chart(
-    document.getElementById('myChart3'),
-    config1
-);
