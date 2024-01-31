@@ -470,14 +470,55 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .op2 {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-            grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            width: 90%;
+            height: 80vh;
     
   }
 
-  .graph1, .graph2, .graph3, .graph4 {
-    background-color: lightblue; /* Set your desired background color */
-    padding: 20px;
-    height: 100%;
+  
+
+  .graph1 {
+    /* background-color: #C6DB88;  */
+   grid-row-start: 1;
+   grid-column-start: 1;
+
+   grid-row-end: 4;
+   grid-column-end: 6;
+   
+  }
+
+  .graph2 {
+    /* background-color: #8D5EDF;  */
+    grid-row-start: 1;
+    grid-column-start: 6;
+ 
+    grid-row-end: 4;
+    grid-column-end: 9;
+  }
+
+  .graph3 {
+    /* background-color: #65A8B5;  */
+   grid-row-start: 4;
+   grid-column-start: 1;
+
+   grid-row-end: 6;
+   grid-column-end: 7;
+   
+  }
+
+  .graph4 {
+    background-color: #FB79BD; 
+    grid-row-start: 4;
+    grid-column-start: 7;
+ 
+    grid-row-end: 6;
+    grid-column-end: 9;
+  }
+
+  #myChart3 {
     width: 100%;
   }
+
+  
