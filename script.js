@@ -31,7 +31,7 @@ function calculator(){
     }
     else{
         totalEmission=(electIP*0.00071)+(lpgIP*0.00207)+(caolIP*0.0025)+(airIP*0.000121)+(railIP*0.0078/1000)+(metroIP*0.0139/1000)+(busIP*0.054/1000)+(carIP*0.1431/1000)+(3.017)+(petrolIP*2.34/1000)+(dieselIP*2.71/1000)+(cngIP*2.07/1000);
-    }
+    }(busIP*0.054/1000)+(carIP*0.1431/1000)+(3.017)+(petrolIP*2.34/1000)+(dieselIP*2.71/1000)+(cngIP*2.07/1000);
     totalEmi=totalEmission.toFixed(2);
     let target1=document.getElementsByClassName("opBox1")[0];
     let target2=document.getElementsByClassName("opBox1")[1];
@@ -40,16 +40,16 @@ function calculator(){
 
     
 
-const electdt = electIP*0.00071*1000;
-var fueldt = (lpgIP*0.00207)+ (caolIP*0.0025);
-const airdt = airIP*33;
-var raildt = railIP*0.0078;
-var metrodt =metroIP*0.0139;
-var busdt =busIP*0.054;
-var cardt =carIP*0.1431;
-var petroldt = petrolIP*2.34;
-var cngdt = cngIP*2.07;
-var dieseldt =dieselIP*2.71;
+const electdt = electIP*0.00071* 1000000;
+var fueldt = (lpgIP*0.00207)+(caolIP*0.0025)* 1000000;
+const airdt = (airIP*0.000121)* 1000000;
+var raildt = (railIP*0.0078/1000)* 1000000;
+var metrodt =(metroIP*0.0139/1000)* 1000000;
+var busdt =(busIP*0.054/1000)* 1000000;
+var cardt =(carIP*0.1431/1000)* 1000000;
+var petroldt = (petrolIP*2.34/1000)* 1000000;
+var cngdt = (cngIP*2.07/1000)* 1000000;
+var dieseldt =(dieselIP*2.71/1000)* 1000000;
 
 
 
@@ -57,7 +57,7 @@ var dieseldt =dieselIP*2.71;
 
 // Data for labels and items
 let labels = ['elect','fuel','air','rail','metro','bus','car','petrol'];
-let itemdata = [98, fueldt, airdt, raildt, metrodt, busdt, cardt, petroldt]; // Convert data to numbers
+let itemdata = [electdt, fueldt, airdt, raildt, metrodt, busdt, cardt, petroldt]; // Convert data to numbers
 
 // Chart data configuration
 const data = {
