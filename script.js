@@ -94,7 +94,7 @@ const chart = new Chart(
 
 // Data for labels and items
 let labels2 = ['elect','fuel','air','rail','metro','bus','car','petrol'];
-let itemdata2 = [98, fueldt, airdt, raildt, metrodt, busdt, cardt, petroldt]; // Convert data to numbers
+let itemdata2 = [electdt, fueldt, airdt, raildt, metrodt, busdt, cardt, petroldt]; // Convert data to numbers
 
 // Chart data configuration
 const data2 = {
@@ -102,7 +102,7 @@ const data2 = {
     datasets: [{
         label: 'Items Data',
         data: itemdata2,
-        backgroundColor: 'rgb(191, 45, 45)',
+        backgroundColor: ['rgb(191, 45, 45)','rgb(191, 0, 45)','rgb(191, 45, 0)','rgb(191, 45, 45)','rgb(191, 0, 45)','rgb(191, 45, 0)','rgb(191, 45, 0)'],
     }]
 };
 

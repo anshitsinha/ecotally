@@ -354,8 +354,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .final22{
     display: flex;
     flex-direction: column;
-    width: 30vw;
-    height: 20vw;
+   
+    
     justify-content: center;
 }
 .m{
