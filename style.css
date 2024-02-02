@@ -350,6 +350,10 @@ input[type="number"]::-webkit-outer-spin-button {
     font-weight: 350;  
 }
 
+.opBox1 {
+    margin-left: 10px;
+}
+
 /* ***** Final Blogs ***** */
 .final22{
     display: flex;
@@ -531,7 +535,7 @@ input[type="number"]::-webkit-outer-spin-button {
     border: #121212 solid 1px;
     display: flex; /* Use flexbox */
     justify-content: space-between;
-    width: 300px;
+    width: 450px;
   }
   
   .arrow {
@@ -541,5 +545,26 @@ input[type="number"]::-webkit-outer-spin-button {
   .blogtitle,
   .arrowin {
     padding: 20px;
+    
+  }
+
+  .blogtitle {
+    display: flex;
+  }
+
+  .blognumber {
+    font-size: 2rem;
+    margin-right: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+  }
+
+  .blogname {
+    margin: 10px;
+  }
+
+  .arrowin {
+    margin: 10px;
+    font-size: 20px;
   }
   
