@@ -515,10 +515,31 @@ input[type="number"]::-webkit-outer-spin-button {
  
     grid-row-end: 6;
     grid-column-end: 9;
+    
   }
 
   #myChart3 {
     width: 100%;
   }
 
+  .graph {
+    display: flex;
+    flex-direction: column; /* Ensures items are stacked vertically */
+  }
+  
+  .blogbox {
+    border: #121212 solid 1px;
+    display: flex; /* Use flexbox */
+    justify-content: space-between;
+    width: 300px;
+  }
+  
+  .arrow {
+    border-left: #121212 solid 1px;
+  }
+  
+  .blogtitle,
+  .arrowin {
+    padding: 20px;
+  }
   
