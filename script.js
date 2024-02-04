@@ -32,7 +32,7 @@ function calculator() {
     totalEmi = totalEmission.toFixed(2);
     let target1 = document.getElementsByClassName("opBox1")[0];
     let target2 = document.getElementsByClassName("opBox1")[1];
-    target1.innerHTML = "Your approximate Carbon Footprint";
+    target1.innerHTML = "Your approximate Carbon Footprint is";
     target2.innerHTML = +totalEmi + " tonnes";
 
     const electdt = electIP * 0.00071 * 1000000;
